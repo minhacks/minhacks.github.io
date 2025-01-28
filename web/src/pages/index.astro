@@ -1,6 +1,7 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { Greeting } from "../components/Greeting";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,6 +18,7 @@ import Layout from '../layouts/Layout.astro';
     </nav>
   </header>
   <main>
+    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
     <div>Hero: I build websites and web solutions + contact us button</div>
     <div>
       Websites for South Bay. Set up payment integrations. Refresh your existing

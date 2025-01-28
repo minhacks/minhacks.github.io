@@ -1,21 +1,19 @@
 ---
-import Layout from "./Layout.astro";
-
-const { frontmatter } = Astro.props;
+import Layout from "../../layouts/Layout.astro";
+const posts = Object.values(import.meta.glob("../posts/*.md", { eager: true }));
+const tags = [
+  ...new Set(posts.map((post: any) => post.frontmatter?.tags).flat()),
+];
 ---
 
 <Layout>
-  <h1>{frontmatter.title}</h1>
-  <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p>Written by {frontmatter.author}</p>
   {
-    frontmatter.tags.map((tag: any) => (
-      <p class="tags">
+    tags.map((tag: any) => (
+      <div class="tags">
         <a href={`/web/tags/${tag}`}>{tag}</a>
-      </p>
+      </div>
     ))
   }
-  <slot />
 </Layout>
 
 <style>
