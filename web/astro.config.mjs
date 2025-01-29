@@ -3,9 +3,11 @@ import { defineConfig } from "astro/config";
 
 import solidJs from "@astrojs/solid-js";
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://minhacks.dev",
   base: "/web",
-  integrations: [solidJs()],
+  integrations: [solidJs(), tailwind()],
 });
