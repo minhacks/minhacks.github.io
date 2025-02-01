@@ -1,0 +1,37 @@
+---
+import BlogPostLink from "../../components/BlogPostLink.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = Object.values(
+    import.meta.glob("../posts/*.md", { eager: true })
+  );
+  const tags = [
+    ...new Set(posts.map((post: any) => post.frontmatter?.tags).flat()),
+  ];
+
+  return tags.map((tag) => {
+    const filteredPosts = posts.filter((post: any) =>
+      post.frontmatter?.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout pageTitle={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {
+      posts.map((post: any) => (
+        <BlogPostLink title={post.frontmatter.title} url={post.url} />
+      ))
+    }
+  </ul>
+</Layout>
