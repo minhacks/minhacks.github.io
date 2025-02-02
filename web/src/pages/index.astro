@@ -1,28 +1,51 @@
 ---
-import { Greeting } from '../components/Greeting';
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import ArrowLongRight from "../components/ArrowLongRight.astro";
+import Button from "../components/Button.astro";
+import { Greeting } from "../components/Greeting";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Welcome />
-  <header>
-    Header
-    <nav>
-      <div>About</div>
-      <div>Github link</div>
-      <div>Linkedin link</div>
-    </nav>
-  </header>
   <main>
-    <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} />
-    <div>Hero: I build websites and web solutions + contact us button</div>
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <h1 class="text-6xl">Build Your Digital Presence</h1>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-wide"
+            >Let's Chat <ArrowLongRight /></button
+          >
+        </div>
+      </div>
+    </section>
+    <section>
+      CTA for consultation
+      <div>Call to action</div>
+    </section>
+    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
     <div>
       Websites for South Bay. Set up payment integrations. Refresh your existing
       website. Mention SEO
+    </div>
+    Custom Website Design E-commerce Solutions Responsive Design (Mobile-Friendly)
+    Website Maintenance SEO Optimization Web Development (Front-end / Back-end) Branding
+    & UX/UI Design
+    <div>
+      “Let’s Build Your Dream Website” – This encourages potential clients to
+      reach out for a personalized solution. “Get Your Free Website
+      Consultation” – Offering a free consultation builds trust and encourages
+      action. “Ready to Take Your Website to the Next Level?” – This implies
+      you’re offering a service that will improve their business and creates a
+      sense of urgency. “Book a Free Strategy Session” – This focuses on
+      collaboration and problem-solving, which is always appealing for a
+      service-based business. “Request Your Free Website Audit Today” – Offering
+      an audit is a valuable way to introduce your expertise while providing a
+      tangible benefit to your audience.
     </div>
     <div>
       TODO: Three icons blurb: 1. Free consultation, 2. Working around your

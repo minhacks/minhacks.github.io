@@ -1,6 +1,38 @@
-html {
+@import "tailwindcss";
+@plugin "daisyui";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/web/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Serif";
+  src: url("/web/fonts/DMSerifText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-display: "DM Serif", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* html {
   background-color: #f1f5f9;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -18,10 +50,11 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
-}
+  font-family: var(--font-sans);
+} */
 
 /* nav styles */
-.hamburger {
+/* .hamburger {
   padding-right: 20px;
   cursor: pointer;
 }
@@ -79,13 +112,13 @@ h1 {
   .hamburger {
     display: none;
   }
-}
+} */
 
 html.dark {
-  background-color: #0d0950;
-  color: #fff;
+  /* background-color: #0d0950; */
+  /* color: #fff; */
 }
 
 .dark .nav-links a {
-  color: #fff;
+  /* color: #fff; */
 }
