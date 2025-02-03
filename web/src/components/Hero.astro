@@ -1,0 +1,21 @@
+---
+import ArrowLongRight from "./ArrowLongRight.astro";
+import ResponsivePageContainer from "./ResponsivePageContainer.astro";
+---
+
+<div
+  class="w-screen h-[200px] lg:h-[600px] bg-base-300 flex items-center justify-center"
+>
+  <ResponsivePageContainer>
+    <div class="flex flex-col gap-2">
+      <div class="w-[90%] lg:w-4xl">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl">
+          Build your digital presence with a website that works for you
+        </h1>
+      </div>
+      <div class="text-right">
+        <button class="btn btn-primary">Let's Chat <ArrowLongRight /></button>
+      </div>
+    </div>
+  </ResponsivePageContainer>
+</div>

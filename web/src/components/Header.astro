@@ -1,21 +1,43 @@
 ---
+import { Image } from "astro:assets";
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+import githubLogo from "../assets/github-mark.svg";
+import linkedInLogo from "../assets/linkedin-logo.png";
+import ResponsivePageContainer from "./ResponsivePageContainer.astro";
 ---
 
-<header class="py-4">
-  <nav class="flex items-center justify-between">
-    <div>
-      <h3 class="text-xl">Minhacks</h3>
-    </div>
-    <div class="flex gap-4">
-      <div>About</div>
-      <div>Github link</div>
-      <div>Linkedin link</div>
-    </div>
-    <!-- <Hamburger /> -->
-    <!-- <ThemeIcon /> -->
-    <!-- <Navigation /> -->
-  </nav>
+<header class="w-screen flex justify-center">
+  <!-- <div class="flex"> -->
+  <ResponsivePageContainer>
+    <nav class="py-4 flex items-center justify-between">
+      <div class="flex gap-6 items-center">
+        <a href="/web">
+          <div class="flex gap-1 sm:gap-2 cursor-pointer">
+            <img class="w-5 sm:w-6" src="/web/favicon.svg" />
+            <h3 class="text-xl sm:text-2xl">Minhacks</h3>
+          </div>
+        </a>
+      </div>
+      <div class="sm:hidden">
+        <Hamburger />
+      </div>
+      <div class="hidden sm:flex gap-6 items-center">
+        <a href="/web/about">About</a>
+        <a href="/web/services">Services</a>
+        <a href="/web/contact">Contact</a>
+      </div>
+      <!-- <ThemeIcon /> -->
+      <!-- <Navigation /> -->
+    </nav>
+  </ResponsivePageContainer>
+  <!-- </div> -->
 </header>
+
+<style>
+  .filter-white {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(96%) saturate(5%)
+      hue-rotate(204deg) brightness(104%) contrast(101%);
+  }
+</style>
