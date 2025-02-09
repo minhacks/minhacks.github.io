@@ -1,3 +1,4 @@
-1. Fix design for smallest form factor
-2. Finalize Hero CTA
-3. Get hamburger working
+- Finalize Hero CTA
+- Get hamburger working
+- Change white text to off white like in logo
+- Finalize Services

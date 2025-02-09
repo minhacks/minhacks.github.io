@@ -19,6 +19,7 @@
 
 @theme {
   --font-display: "DM Serif", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 h1,
