@@ -1,0 +1,21 @@
+---
+import ArrowUpRight from "./ArrowUpRight.astro";
+import { LinkType } from "./Link";
+
+const { linkType = LinkType.Internal, linkText, url } = Astro.props;
+---
+
+<a
+  href={url}
+  target={linkType === LinkType.External ? "_blank" : ""}
+  class="text-center md:text-left font-bold"
+>
+  {linkText}
+  {
+    linkType === LinkType.External && (
+      <span class="inline-block">
+        <ArrowUpRight strokeWidth={3} />
+      </span>
+    )
+  }
+</a>

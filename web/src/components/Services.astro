@@ -1,62 +1,33 @@
-<!-- <div>hello world</div>
-<div>
-  Websites for South Bay. Set up payment integrations. Refresh your existing
-  website. Mention SEO
-</div>
-Custom Website Design E-commerce Solutions Responsive Design (Mobile-Friendly) Website
-Maintenance SEO Optimization Web Development (Front-end / Back-end) Branding & UX/UI
-Design
-<div>
-  “Let’s Build Your Dream Website” – This encourages potential clients to reach
-  out for a personalized solution. “Get Your Free Website Consultation” –
-  Offering a free consultation builds trust and encourages action. “Ready to
-  Take Your Website to the Next Level?” – This implies you’re offering a service
-  that will improve their business and creates a sense of urgency. “Book a Free
-  Strategy Session” – This focuses on collaboration and problem-solving, which
-  is always appealing for a service-based business. “Request Your Free Website
-  Audit Today” – Offering an audit is a valuable way to introduce your expertise
-  while providing a tangible benefit to your audience.
-</div>
-<div>
-  TODO: Three icons blurb: 1. Free consultation, 2. Working around your budget,
-  3. Timely solutions
-</div> -->
-<div class="flex flex-col">
-  <div>
-    <div class="divider"></div>
-    <div>
-      <h1 class="text-center text-xl">Simple Consultation</h1>
-      <div>
-        A free and friendly 30-minute chat to understand your business dreams
-        and goals. No tech talk, just real conversation.
-      </div>
-      <a
-        href="https://calendly.com/minhacks/free-consultation"
-        target="_blank"
-        class="font-bold">Book your free chat ↗</a
-      >
-    </div>
+---
+import { IconType } from "./Icon";
+import { LinkType } from "./Link";
+import ResponsivePageContainer from "./ResponsivePageContainer.astro";
+import Service from "./Service.astro";
+---
+
+<ResponsivePageContainer>
+  <div class="flex flex-col md:flex-row gap-12 md:mt-8">
+    <Service
+      iconType={IconType.UserCircle}
+      title="Simple Consultation"
+      content="A free and friendly 30-minute chat to understand your business dreams and goals. No tech talk, just real conversation."
+      linkType={LinkType.External}
+      linkText="Book your free chat"
+      url="https://calendly.com/minhacks/free-consultation"
+    />
+    <Service
+      iconType={IconType.RectangleGroup}
+      title="Strategic Design"
+      content="We create a website that fits your business perfectly – clean, professional, and easy for your customers to use."
+      linkText="See how it works"
+      url="/web/how-it-works"
+    />
+    <Service
+      iconType={IconType.RocketLaunch}
+      title="Seamless Launch"
+      content="Your new website goes live with zero hassle. We handle all the technical details while you focus on your business."
+      linkText="View pricing/FAQ"
+      url="/web/pricing-and-faq"
+    />
   </div>
-  <div>
-    <div class="divider"></div>
-    <div>
-      <h1 class="text-center text-xl">Strategic Design</h1>
-      <div>
-        We create a website that fits your business perfectly – clean,
-        professional, and easy for your customers to use.
-      </div>
-      <a href="/web/how-it-works" class="font-bold">See how it works</a>
-    </div>
-  </div>
-  <div>
-    <div class="divider"></div>
-    <div>
-      <h1 class="text-center text-xl">Seamless Launch</h1>
-      <div>
-        Your new website goes live with zero hassle. We handle all the technical
-        details while you focus on your business.
-      </div>
-      <a href="/web/pricing-faq" class="font-bold">View pricing/FAQ</a>
-    </div>
-  </div>
-</div>
+</ResponsivePageContainer>
