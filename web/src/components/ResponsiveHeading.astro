@@ -1,0 +1,11 @@
+---
+const {
+  def = "text-3xl",
+  md = "md:text-4xl",
+  lg = "lg:text-6xl",
+} = Astro.props;
+---
+
+<h1 class={`${def} ${md} ${lg} leading-[1.4]`}>
+  <slot />
+</h1>

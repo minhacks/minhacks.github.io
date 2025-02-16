@@ -1,17 +1,18 @@
 ---
 import ArrowLongRight from "./ArrowLongRight.astro";
+import ResponsiveHeading from "./ResponsiveHeading.astro";
 import ResponsivePageContainer from "./ResponsivePageContainer.astro";
 ---
 
 <div
-  class="w-screen h-[200px] lg:h-[600px] flex items-center justify-center min-h-80 bg-neutral text-white"
+  class="w-screen h-[200px] lg:h-[760px] flex items-center justify-center min-h-80 bg-neutral text-white"
 >
   <ResponsivePageContainer>
     <div class="flex flex-col gap-2">
       <div class="w-[90%] lg:w-4xl">
-        <h1 class="text-3xl leading-[1.4] md:text-4xl lg:text-6xl">
+        <ResponsiveHeading>
           Small business, big web presence — right here in South Bay
-        </h1>
+        </ResponsiveHeading>
       </div>
       <div class="text-right">
         <button class="btn btn-primary">Let's Chat <ArrowLongRight /></button>

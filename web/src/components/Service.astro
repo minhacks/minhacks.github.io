@@ -6,13 +6,13 @@ const { content, iconType, linkText, linkType, title, url } = Astro.props;
 ---
 
 <div>
-  <div class="divider"></div>
+  <div class="divider divider-white"></div>
   <div class="flex flex-col gap-2">
     <div class="flex flex-col gap-4">
       <Icon icon={iconType} size="size-8" />
       <h1 class="text-lg">{title}</h1>
     </div>
-    <div class="opacity-50">
+    <div class="opacity-55">
       {content}
     </div>
     {
@@ -25,3 +25,12 @@ const { content, iconType, linkText, linkType, title, url } = Astro.props;
     <slot />
   </div>
 </div>
+
+<style>
+  .divider-white {
+    &:before,
+    &:after {
+      background-color: white;
+    }
+  }
+</style>

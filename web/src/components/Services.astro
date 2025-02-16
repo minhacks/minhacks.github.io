@@ -5,29 +5,33 @@ import ResponsivePageContainer from "./ResponsivePageContainer.astro";
 import Service from "./Service.astro";
 ---
 
-<ResponsivePageContainer>
-  <div class="flex flex-col md:flex-row gap-12 md:mt-8">
-    <Service
-      iconType={IconType.UserCircle}
-      title="Simple Consultation"
-      content="A free and friendly 30-minute chat to understand your business dreams and goals. No tech talk, just real conversation."
-      linkType={LinkType.External}
-      linkText="Book your free chat"
-      url="https://calendly.com/minhacks/free-consultation"
-    />
-    <Service
-      iconType={IconType.RectangleGroup}
-      title="Strategic Design"
-      content="We create a website that fits your business perfectly – clean, professional, and easy for your customers to use."
-      linkText="See how it works"
-      url="/how-it-works"
-    />
-    <Service
-      iconType={IconType.RocketLaunch}
-      title="Seamless Launch"
-      content="Your new website goes live with zero hassle. We handle all the technical details while you focus on your business."
-      linkText="View pricing/FAQ"
-      url="/pricing-and-faq"
-    />
-  </div>
-</ResponsivePageContainer>
+<div
+  class="w-screen flex items-center justify-center bg-neutral text-white pb-18 md:pb-24"
+>
+  <ResponsivePageContainer>
+    <div class="flex flex-col md:flex-row gap-12 md:mt-8">
+      <Service
+        iconType={IconType.UserCircle}
+        title="Simple Consultation"
+        content="A free and friendly 30-minute chat to understand your business dreams and goals. No tech talk, just real conversation."
+        linkType={LinkType.External}
+        linkText="Book your free chat"
+        url="https://calendly.com/minhacks/free-consultation"
+      />
+      <Service
+        iconType={IconType.RectangleGroup}
+        title="Strategic Design"
+        content="We create a website that fits your business perfectly – clean, professional, and easy for your customers to use."
+        linkText="See how it works"
+        url="/how-it-works"
+      />
+      <Service
+        iconType={IconType.RocketLaunch}
+        title="Seamless Launch"
+        content="Your new website goes live with zero hassle. We handle all the technical details while you focus on your business."
+        linkText="View pricing/FAQ"
+        url="/pricing-and-faq"
+      />
+    </div>
+  </ResponsivePageContainer>
+</div>
