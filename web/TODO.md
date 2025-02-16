@@ -1,4 +1,5 @@
-- Finalize Hero CTA
+- Wire up hero button
 - Get hamburger working
-- Change white text to off white like in logo
-- Finalize Services
+- Wire up Services CTAs
+- See how it works section
+- View pricing/FAQ section

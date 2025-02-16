@@ -1,32 +1,12 @@
 ---
 import Hero from "../components/Hero.astro";
-import ResponsivePageContainer from "../components/ResponsivePageContainer.astro";
+import Process from "../components/Process.astro";
 import Services from "../components/Services.astro";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
   <Hero />
   <Services />
-  <!-- <section class="flex flex-row">
-      <div class="flex flex-col gap-2">
-        <h1 class="text-6xl">
-          Build your digital presence with a website that works for you
-        </h1>
-        <div class="text-right">
-          <button class="btn btn-primary">Let's Chat <ArrowLongRight /></button>
-        </div>
-      </div>
-      <div></div>
-    </section>
-    <section>
-      CTA for consultation
-      <div>Call to action</div>
-    </section>
-    <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
-    <div>Contact</div> -->
-  <!-- <footer>Footer</footer> -->
+  <Process />
 </Layout>
